@@ -1,0 +1,64 @@
+.container {
+  padding-top: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.ag-theme-alpine {
+  border-radius: 0.375rem;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.status-on-track {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-at-risk {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-delayed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

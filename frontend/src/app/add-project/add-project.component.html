@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Add New Project</h4>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-success" *ngIf="success">
+            <i class="fas fa-check-circle"></i> Project created successfully! Redirecting to dashboard...
+          </div>
+
+          <div class="alert alert-danger" *ngIf="error">
+            <i class="fas fa-exclamation-triangle"></i> {{ error }}
+          </div>
+
+          <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="projectName" class="form-label">Project Name *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="projectName"
+                formControlName="projectName"
+                placeholder="Enter project name"
+                [class.is-invalid]="projectForm.get('projectName')?.invalid && projectForm.get('projectName')?.touched"
+              />
+              <div class="invalid-feedback" *ngIf="projectForm.get('projectName')?.invalid && projectForm.get('projectName')?.touched">
+                <div *ngIf="projectForm.get('projectName')?.errors?.['required']">Project name is required</div>
+                <div *ngIf="projectForm.get('projectName')?.errors?.['minlength']">Project name must be at least 3 characters</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="status" class="form-label">Status *</label>
+              <select
+                class="form-select"
+                id="status"
+                formControlName="status"
+                [class.is-invalid]="projectForm.get('status')?.invalid && projectForm.get('status')?.touched"
+              >
+                <option value="">Select status</option>
+                <option *ngFor="let option of statusOptions" [value]="option.value">
+                  {{ option.label }}
+                </option>
+              </select>
+              <div class="invalid-feedback" *ngIf="projectForm.get('status')?.invalid && projectForm.get('status')?.touched">
+                Status is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="lead" class="form-label">Project Lead *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lead"
+                formControlName="lead"
+                placeholder="Enter project lead name"
+                [class.is-invalid]="projectForm.get('lead')?.invalid && projectForm.get('lead')?.touched"
+              />
+              <div class="invalid-feedback" *ngIf="projectForm.get('lead')?.invalid && projectForm.get('lead')?.touched">
+                <div *ngIf="projectForm.get('lead')?.errors?.['required']">Project lead is required</div>
+                <div *ngIf="projectForm.get('lead')?.errors?.['minlength']">Lead name must be at least 2 characters</div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button 
+                type="button" 
+                class="btn btn-outline-secondary me-md-2"
+                (click)="onCancel()"
+                [disabled]="loading"
+              >
+                Cancel
+              </button>
+              <button 
+                type="submit" 
+                class="btn btn-primary"
+                [disabled]="loading"
+              >
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-2"></span>
+                {{ loading ? 'Creating...' : 'Create Project' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

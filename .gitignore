@@ -1,0 +1,101 @@
+# QA Sandbox - Git Ignore File
+
+# === Python/Django ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+
+# === Node.js/Angular ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Angular
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# === IDE/Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# === Environment ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === Docker ===
+.docker/
+
+# === Test Reports ===
+tests-e2e/reports/
+tests-e2e/screenshots/
+coverage/
+*.tgz
+*.tar.gz
+
+# === Logs ===
+logs/
+*.log
+
+# === Temporary files ===
+*.tmp
+*.temp
+
+# === Package files ===
+*.tgz
+*.tar.gz
+
+# === Compiled files ===
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so 

@@ -4,12 +4,12 @@
   "description": "E2E Tests for QA Sandbox with Selenium WebDriver and Cucumber",
   "scripts": {
     "test": "cucumber-js --require-module ts-node/register --require step-definitions/**/*.ts --format json:reports/cucumber-report.json --format html:reports/cucumber-report.html",
-    "test:chrome": "BROWSER=chrome npm run test",
-    "test:firefox": "BROWSER=firefox npm run test",
-    "test:headless": "BROWSER=chrome-headless npm run test",
-    "test:perf": "npm run test && npm run perf:analyze",
-    "test:perf:chrome": "BROWSER=chrome npm run test:perf",
-    "test:perf:headless": "BROWSER=chrome-headless npm run test:perf",
+    "test:chrome": "cross-env BROWSER=chrome npm run test",
+    "test:firefox": "cross-env BROWSER=firefox npm run test",
+    "test:headless": "cross-env BROWSER=chrome-headless npm run test",
+    "test:perf": "run-s test perf:analyze",
+    "test:perf:chrome": "cross-env BROWSER=chrome npm run test:perf",
+    "test:perf:headless": "cross-env BROWSER=chrome-headless npm run test:perf",
     "perf:analyze": "perf-sentinel analyze --run-file ./performance-results/latest-run.json --history-file ./performance-results/history.json --reporter console",
     "perf:seed": "perf-sentinel seed --run-files \"./performance-results/runs/*.json\" --history-file ./performance-results/history.json",
     "posttest": "node support/generate-report.js"
@@ -17,18 +17,15 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.12",
     "@cucumber/cucumber": "^9.5.1",
+    "@types/chai": "^4.3.6",
     "@types/node": "^18.17.0",
     "@types/selenium-webdriver": "^4.1.15",
-    "@types/chai": "^4.3.6",
     "chai": "^4.3.8",
+    "cross-env": "^7.0.3",
     "cucumber-html-reporter": "^5.5.0",
+    "npm-run-all": "^4.1.5",
     "selenium-webdriver": "^4.13.0",
     "ts-node": "^10.9.1",
-    "typescript": "~4.8.4",
-    "chromedriver": "^116.0.0",
-    "geckodriver": "^4.2.0"
-  },
-  "dependencies": {
-    "webdriver-manager": "^12.1.8"
+    "typescript": "~4.8.4"
   }
-} 
+}

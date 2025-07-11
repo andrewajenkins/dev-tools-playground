@@ -1,0 +1,237 @@
+{
+  "I am logged in to the application": {
+    "durations": [
+      369.9829,
+      312.1813,
+      106.9207,
+      102.779899,
+      311.4693,
+      314.5415,
+      320.423199,
+      308.1549,
+      312.980499
+    ],
+    "average": 273.2704663333334,
+    "stdDev": 97.33079280804174
+  },
+  "I am on the add project page": {
+    "durations": [
+      55.3168,
+      49.6322,
+      42.0963,
+      42.735399
+    ],
+    "average": 47.44517475,
+    "stdDev": 6.259340013852652
+  },
+  "I enter project name \"Test Project Alpha\"": {
+    "durations": [
+      41.3523
+    ],
+    "average": 41.3523,
+    "stdDev": 0
+  },
+  "I select status \"On Track\"": {
+    "durations": [
+      60.5443
+    ],
+    "average": 60.5443,
+    "stdDev": 0
+  },
+  "I enter lead name \"John Doe\"": {
+    "durations": [
+      36.806
+    ],
+    "average": 36.806,
+    "stdDev": 0
+  },
+  "I click the create project button": {
+    "durations": [
+      24.8456,
+      20.6732,
+      22.358
+    ],
+    "average": 22.625600000000002,
+    "stdDev": 2.099032577165014
+  },
+  "I should see a success message": {
+    "durations": [
+      69.862599
+    ],
+    "average": 69.862599,
+    "stdDev": 0
+  },
+  "I should be redirected to the dashboard page": {
+    "durations": [
+      67.6525,
+      3.0817,
+      6.8733,
+      6.3828
+    ],
+    "average": 20.997575,
+    "stdDev": 31.14882232309648
+  },
+  "I should see the new project in the project list": {
+    "durations": [
+      229.0416
+    ],
+    "average": 229.0416,
+    "stdDev": 0
+  },
+  "I should see validation errors for required fields": {
+    "durations": [
+      7.9759
+    ],
+    "average": 7.9759,
+    "stdDev": 0
+  },
+  "I should remain on the add project page": {
+    "durations": [
+      1.8423,
+      1.475899
+    ],
+    "average": 1.6590995,
+    "stdDev": 0.2590846317335322
+  },
+  "I enter project name \"AB\"": {
+    "durations": [
+      28.433799
+    ],
+    "average": 28.433799,
+    "stdDev": 0
+  },
+  "I enter lead name \"X\"": {
+    "durations": [
+      29.487299
+    ],
+    "average": 29.487299,
+    "stdDev": 0
+  },
+  "I should see validation errors for minimum length": {
+    "durations": [
+      5.904399
+    ],
+    "average": 5.904399,
+    "stdDev": 0
+  },
+  "I click the cancel button": {
+    "durations": [
+      27.0646
+    ],
+    "average": 27.0646,
+    "stdDev": 0
+  },
+  "no new project should be created": {
+    "durations": [
+      1.487399
+    ],
+    "average": 1.487399,
+    "stdDev": 0
+  },
+  "I am on the dashboard page": {
+    "durations": [
+      44.0784,
+      45.901999,
+      49.748,
+      45.9222,
+      43.7716
+    ],
+    "average": 45.8844398,
+    "stdDev": 2.3798478605197
+  },
+  "I should see the project table": {
+    "durations": [
+      261.493199
+    ],
+    "average": 261.493199,
+    "stdDev": 0
+  },
+  "I should see project data loaded": {
+    "durations": [
+      7.7317
+    ],
+    "average": 7.7317,
+    "stdDev": 0
+  },
+  "I should see pagination controls": {
+    "durations": [
+      11.186099
+    ],
+    "average": 11.186099,
+    "stdDev": 0
+  },
+  "I click the \"Add Project\" button": {
+    "durations": [
+      29.357899
+    ],
+    "average": 29.357899,
+    "stdDev": 0
+  },
+  "I should be redirected to the add project page": {
+    "durations": [
+      3.2157
+    ],
+    "average": 3.2157,
+    "stdDev": 0
+  },
+  "I should see the \"Add Project\" button with a dynamic ID": {
+    "durations": [
+      10.026
+    ],
+    "average": 10.026,
+    "stdDev": 0
+  },
+  "the button ID should contain \"add-project-btn-\"": {
+    "durations": [
+      5.834699
+    ],
+    "average": 5.834699,
+    "stdDev": 0
+  },
+  "the button should be clickable regardless of ID changes": {
+    "durations": [
+      7.1394
+    ],
+    "average": 7.1394,
+    "stdDev": 0
+  },
+  "I am on the login page": {
+    "durations": [
+      36.144599,
+      39.503499,
+      39.122199
+    ],
+    "average": 38.25676566666667,
+    "stdDev": 1.8390985409524236
+  },
+  "I enter username \"testuser\" and password \"password123\"": {
+    "durations": [
+      69.983499
+    ],
+    "average": 69.983499,
+    "stdDev": 0
+  },
+  "I click the login button": {
+    "durations": [
+      23.6288,
+      20.417799,
+      21.306199
+    ],
+    "average": 21.784266000000002,
+    "stdDev": 1.6580237929134185
+  },
+  "I should see the project list": {
+    "durations": [
+      314.818199
+    ],
+    "average": 314.818199,
+    "stdDev": 0
+  },
+  "I enter username \"a\" and password \"b\"": {
+    "durations": [
+      55.685499
+    ],
+    "average": 55.685499,
+    "stdDev": 0
+  }
+}

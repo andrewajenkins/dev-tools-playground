@@ -7,13 +7,13 @@ import * as path from 'path';
 const performanceData: any[] = [];
 
 // Global setup before all tests
-BeforeAll(async function () {
+BeforeAll({ timeout: 30000 }, async function () {
   console.log('🚀 Starting QA Sandbox E2E Test Suite');
   await initializeDriver();
 });
 
 // Global cleanup after all tests
-AfterAll(async function () {
+AfterAll({ timeout: 30000 }, async function () {
   console.log('🏁 Completed QA Sandbox E2E Test Suite');
   await quitDriver();
 });
@@ -29,6 +29,9 @@ Before(async function (scenario) {
   
   const driver = getDriver();
   
+  // Navigate to the application first to enable localStorage
+  await driver.get('http://localhost:4200');
+  
   // Clear browser storage before each test
   await driver.executeScript('localStorage.clear();');
   await driver.executeScript('sessionStorage.clear();');
@@ -38,7 +41,7 @@ Before(async function (scenario) {
 });
 
 // After each scenario
-After(async function (scenario) {
+After({ timeout: 30000 }, async function (scenario) {
   const driver = getDriver();
   
   // Take screenshot if scenario failed
@@ -101,7 +104,7 @@ AfterStep(function (testStep) {
 });
 
 // Write performance data to file after all tests
-AfterAll(async function () {
+AfterAll({ timeout: 10000 }, async function () {
   if (performanceData.length > 0) {
     const outputDir = path.join(process.cwd(), 'performance-results');
     

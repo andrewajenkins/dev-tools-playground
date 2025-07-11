@@ -7,10 +7,12 @@ class Command(BaseCommand):
     help = 'Seed database with mock project data'
     
     def handle(self, *args, **options):
+        # Only seed if there are no projects
+        if Project.objects.exists():
+            self.stdout.write(self.style.SUCCESS('Database already seeded. Skipping.'))
+            return
+
         fake = Faker()
-        
-        # Clear existing data
-        Project.objects.all().delete()
         
         # Generate 120 mock projects
         projects = []

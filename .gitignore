@@ -46,6 +46,7 @@ dist/
 tmp/
 out-tsc/
 bazel-out/
+frontend/.angular/
 
 # === IDE/Editor ===
 .vscode/
@@ -79,6 +80,11 @@ tests-e2e/screenshots/
 coverage/
 *.tgz
 *.tar.gz
+
+# === Performance Data ===
+# Keep history.json (committed), ignore temporary files
+tests-e2e/performance-results/latest-run.json
+tests-e2e/performance-results/runs/
 
 # === Logs ===
 logs/

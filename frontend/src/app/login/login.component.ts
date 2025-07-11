@@ -26,6 +26,7 @@ export class LoginComponent {
 
   onSubmit(): void {
     if (this.loginForm.invalid) {
+      this.markFormGroupTouched(this.loginForm);
       return;
     }
 
@@ -43,6 +44,13 @@ export class LoginComponent {
         this.error = 'Login failed. Please try again.';
         this.loading = false;
       }
+    });
+  }
+
+  private markFormGroupTouched(formGroup: FormGroup): void {
+    Object.keys(formGroup.controls).forEach(key => {
+      const control = formGroup.get(key);
+      control?.markAsTouched();
     });
   }
 } 
